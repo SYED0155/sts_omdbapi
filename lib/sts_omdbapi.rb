@@ -36,7 +36,7 @@ module StsOmdbapi
   end
 
   def self.get_movie_data_using_title_year_type_plot_params(title=nil,year=nil,type=nil,plot=nil)
-    response = HTTP.get("#{OMDBAPI_URL}&=t=#{title}&y=#{year}&plot=#{plot}&type=#{type}")
+    response = HTTP.get("#{OMDBAPI_URL}&t=#{title}&y=#{year}&plot=#{plot}&type=#{type}")
     if response
       render json: {response:response, status: 200}
     else
@@ -45,7 +45,7 @@ module StsOmdbapi
   end
 
   def self.get_movie_data_using_movie_id_year_type_plot_params(movie_id=nil,year=nil,type=nil,plot=nil)
-    response = HTTP.get("#{OMDBAPI_URL}&=i=#{movie_id}&y=#{year}&plot=#{plot}&type=#{type}")
+    response = HTTP.get("#{OMDBAPI_URL}&i=#{movie_id}&y=#{year}&plot=#{plot}&type=#{type}")
     if response
       render json: {response:response, status: 200}
     else
