@@ -9,4 +9,5 @@ gem "rake", "~> 13.0"
 
 gem "http"
 
-# gem "rubocop", "~> 1.7"
+gem "rubocop", "~> 1.7"
+#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
